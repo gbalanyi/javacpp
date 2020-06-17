@@ -43,14 +43,14 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <id>snapshots-dist</id>
+      <name>Snapshots</name>
+      <url>${snapshots.url}</url>
     </snapshotRepository>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Sonatype Nexus Staging</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>central-dist</id>
+      <name>Central</name>
+      <url>${central.url}</url>
     </repository>
   </distributionManagement>
 
@@ -290,17 +290,7 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>sonatype-nexus-staging</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
-        </configuration>
-      </plugin>
+
       <!--
         Process the OSGi annotations and generate a suitable
         MANIFEST.MF file for this bundle. This will be merged
