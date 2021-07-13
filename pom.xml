@@ -43,14 +43,14 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>snapshots-dist</id>
+      <id>github_gbalanyi</id>
       <name>Snapshots</name>
-      <url>${snapshots.url}</url>
+      <url>https://maven.pkg.github.com/gbalanyi/javacpp</url>
     </snapshotRepository>
     <repository>
-      <id>central-dist</id>
+      <id>github_gbalanyi</id>
       <name>Central</name>
-      <url>${central.url}</url>
+      <url>https://maven.pkg.github.com/gbalanyi/javacpp</url>
     </repository>
   </distributionManagement>
 
